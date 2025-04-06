@@ -1,0 +1,30 @@
+Pseudocode:
+ Pseudocode for generating UserSafetyScore based on
+ questionnaire.
+
+ UserSafetyScore(Responses{‘question’: ‘response’}):
+
+ UserSafetyScore = 0
+
+ For question, response in Responses:
+
+   Switch(question):
+     ‘How well do you remember the number of websites on which you have created a password’:
+   
+   UserSafetyScore + = Response * 0.127 / 4
+     ‘How frequently you reuse same password across multiple websites
+
+ /How frequently do you write down the password on a piece of paper / save it on PC’:
+
+   UserSafetyScore + = (5– Response) * 0.253 / 4
+     ‘How frequently do you change your password without the imposition of website’:
+
+   UserSafetyScore + = Response * 0.127 / 4
+     ‘Do you like to set a complex password or go with simple easy to remember password if not restricted by websites’:
+
+   UserSafetyScore + = Response * 0.270 / 4
+     ‘How carefully do you observe the authenticity of the page where you are keying in your crucial information’:
+
+   UserSafetyScore + = Response * 0.224 / 4
+
+ Return UserSafetyScore
